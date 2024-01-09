@@ -1,0 +1,57 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Odontólogo</title>
+    <!-- Agrega los estilos y scripts de Materialize CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="header center-align">Eliminar Odontólogo</h1>
+
+        <!-- Botón para regresar a la pantalla anterior -->
+        <div class="btnYForm">
+            <a class="waves-effect waves-light btn" onclick="window.history.back()">Regresar</a>
+
+            <form id="formularioEliminacion" action="">
+                <input id="numeroIdAEliminar" type="number" placeholder="ID a eliminar">
+    
+                <button id="btnEliminar" type="submit">ELIMINAR</button>
+            </form>
+        </div>
+       
+        <!-- Tabla con encabezados de id, nombre, apellido y matrícula -->
+        <table class="highlight">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Matrícula</th>
+                </tr>
+            </thead>
+            <tbody id="tablaInfo">
+                <!-- Aquí puedes agregar las filas con la información de los odontólogos -->
+                <!-- <tr id="lineaDeDatos"> -->
+                    <!-- <td id="tablaInfoId"></td>
+                    <td id="tablaInfoNombre"></td>
+                    <td id="tablaInfoApellido"></td>
+                    <td id="tablaInfoMatricula"></td> -->
+                <!-- </tr> -->
+
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
+    <script src="eliminarOdoJS.js"></script>
+    <script src="info.js"></script>
+  
+
+
+</body>
+</html>

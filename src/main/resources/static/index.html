@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Odonotologica | Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav class="green">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Clinica Odontologica</a>
+                <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <!-- Agrega más elementos de menú según sea necesario -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<main class="container">
+    <div class="containerEntitys">
+
+        <div class="Entity">
+            <div class="entityImg">
+                <img src="img/dentist.png"  alt="">
+            </div>
+            <div class="EntityTitulo">
+                <h2>Odontologo</h2>
+            </div>
+            <div class="crudContainer">
+                <a href="#"   class="tooltipped" data-position="bottom" data-tooltip="Registrar">
+                    <img src="img/crud/plus.png" alt="agregar odontologo" id="odontologoPlus">
+                </a>
+                <a href="actualizarOdontologo.html" class="tooltipped" data-position="bottom" data-tooltip="Actualizar">
+                    <img src="img/crud/pencil.png" alt="actualizar odontontolo">
+                </a>
+                <a href="listadoOdontologos.html" class="tooltipped" data-position="bottom" data-tooltip="Listar todos">
+                    <img src="img/crud/list.png" alt="listar odontologos">
+                </a>
+                <a href="#" class="tooltipped" data-position="bottom" data-tooltip="Bucar">
+                    <img src="img/crud/look-for.png" alt="buscar odontologo por id" id="buscarOdontologo">
+                </a>
+                <a href="eliminarOdo.html" class="tooltipped" data-position="bottom" data-tooltip="Eliminar">
+                    <img src="img/crud/delete.png" alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="Entity">
+            <div class="entityImg">
+                <img src="img/toothache.png" alt="">
+            </div>
+            <div class="EntityTitulo">
+                <h2>Paciente</h2>
+            </div>
+            <div class="crudContainer">
+                <a href="#" class="tooltipped" data-position="bottom" data-tooltip="Registrar">
+                    <img src="img/crud/plus.png" alt="agregar paciente" id="pacientePlus">
+                </a>
+                <a href="actualizarPaciente.html"  class="tooltipped" data-position="bottom" data-tooltip="Actualizar">
+                    <img src="img/crud/pencil.png" alt="actualizar paciente">
+                </a>
+                <a href="listadoPacientes.html" class="tooltipped" data-position="bottom" data-tooltip="Listar todos">
+                    <img src="img/crud/list.png" alt="listar paciente">
+                </a>
+                <a href="#" class="tooltipped" data-position="bottom" data-tooltip="Bucar">
+                    <img src="img/crud/look-for.png" alt="buscar paciente por id" id="buscarPaciente">
+                </a>
+                <a href="#" class="tooltipped" data-position="bottom" data-tooltip="Eliminar">
+                    <img src="img/crud/delete.png" alt="eliminar paciente">
+                </a>
+            </div>
+
+        </div>
+        <div class="Entity">
+            <div class="entityImg">
+                <img src="img/dental-care.png" alt="">
+            </div>
+            <div class="EntityTitulo">
+                <h2>Turno</h2>
+            </div>
+            <div class="crudContainer">
+                <a href="#"  class="tooltipped" data-position="bottom" data-tooltip="Registrar">
+                    <img src="img/crud/plus.png" alt="agregar turno" id="turnoPlus">
+                </a>
+                <a href="actualizarOdontologo.html"  class="tooltipped" data-position="bottom" data-tooltip="Actualizar">
+                    <img src="img/crud/pencil.png" alt="actualizar turno">
+                </a>
+                <a href="listadoTurnos.html" class="tooltipped" data-position="bottom" data-tooltip="Listar todos">
+                    <img src="img/crud/list.png" alt="listar turnos">
+                </a>
+                <a href="#"  class="tooltipped" data-position="bottom" data-tooltip="Bucar">
+                    <img src="img/crud/look-for.png" alt="buscar turno por id" >
+                </a>
+                <a href="#"  class="tooltipped" data-position="bottom" data-tooltip="Eliminar">
+                    <img src="img/crud/delete.png" alt="eliminar turno">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <form class="busquedaPaciente visibility1" id="busPac">
+        <input type="text" id="apellidoInput" placeholder="Ingrese el apellido">
+        <button onclick="buscarPaciente()">Buscar</button>
+        <div id="errorResultado"></div>
+        <!-- Aquí mostrarás los resultados de la búsqueda -->
+        <div id="resultados"></div>
+    </form>
+
+    <form class="busquedaOdontologo visibility1" id="busOdo">
+        <input type="text" id="apellidoInput2" placeholder="Ingrese el apellido">
+        <button onclick="buscarOdontologo()">Buscar</button>
+
+        <!-- Aquí mostrarás los resultados de la búsqueda -->
+        <div id="resultados2"></div>
+    </form>
+
+
+
+    <section class="formulario agregarOdontologo visibility1">
+
+        <h3>Agregar odontologo</h3>
+        <form class="agregarPacienteForm" id="formularioOdontologo">
+            <div class="cajaGrande">
+
+
+                <div class="caposARellenar">
+                    <div class="camposHorizontales">
+                        <div class="campoColumn">
+                            <label for="nombre">nombre</label>
+                            <input type="text" placeholder="nombre" name="nombre" id="nombre">
+                            <div class="campoDeError">
+                                <ul id="nombreErrores" >
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="campoColumn">
+                            <label for="apellido">apellido</label>
+                            <input type="text" placeholder="apellido" name="apellido" id="apellido" >
+                                <div class="campoDeError">
+                                    <ul id="apellidoErrores">
+
+                                    </ul>
+                                </div>
+                        </div>
+
+                    </div>
+                    <div class="campoColumn">
+                        <label for="matricula">matricula</label>
+                        <input type="text" placeholder="matricula" name="matricula" id="matricula">
+                        <div class="campoDeError">
+                            <ul id="matriculaErrores">
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn" id="btnReg">Registrar</button>
+
+            </div>
+        </form>
+
+
+
+    </section>
+
+    <section class="formulario2 agregarPaciente visibility1" >
+
+        <h3>Agregar Paciente</h3>
+        <form class="agregarPacienteForm"  id="formularioPaciente">
+            <div class="cajaGrande">
+                <div class="camposARellenar2 datosPersonales">
+
+                    <div class="camposHorizontales2">
+                        <div class="campoColumn2">
+                            <label for="nombrePac">Nombre</label>
+                             <input type="text" placeholder="nombre" name="nombrePaciente" id="nombrePac">
+                             <div class="campoDeError">
+                                <ul id="nombreErroresPac">
+    
+                                </ul>
+    
+                            </div>
+                        </div>
+                        <div class="campoColumn2">
+                            <label for="apellidoPac">Apellido</label>
+                            <input type="text" placeholder="apellido" name="apellidoPaciente" id="apellidoPac">
+                            <div class="campoDeError">
+                                <ul id="apellidoErroresPac">
+    
+                                </ul>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="camposHorizontales2">
+                        <div class="campoColumn2">
+                            <label for="dni">DNI</label>
+                            <input type="number" placeholder="38323345" name="dni" id="dni">
+
+                            <div class="campoDeError">
+                                <ul id="dniErroresPac">
+    
+                                </ul>
+    
+                            </div>
+                        </div>
+                        <div class="campoColumn2">
+                            <label for="fecha">Fecha de ingreso</label>
+                            <input type="date" placeholder="dd-mm-yyyy" name="fecha" id="fecha">
+
+                            <div class="campoDeError">
+                                <ul id="fechaErroresPac">
+    
+                                </ul>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineaDivisoria"></div>
+
+                    <div class="camposARellenar2 domicilio">
+                        <div class="camposHorizontales2">
+                            <div class="campoColumn2">
+                                <label for="calle">Domicilio_Calle</label>
+                                <input type="text" placeholder="Calle" name="calle" id="calle">
+                                <div class="campoDeError">
+                                    <ul id="calleErroresDom">
+        
+                                    </ul>
+        
+                                </div>
+                                
+                            </div>
+                            <div class="campoColumn2">
+                                <label for="localidad">Localidad</label>
+                                <input type="text" placeholder="Localidad" name="localidad" id="localidad">
+
+
+                                <div class="campoDeError">
+                                    <ul id="localidadErroresDom">
+        
+                                    </ul>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="camposHorizontales2">
+                            <div class="campoColumn2">
+                                <label for="numero">Domicilio_Numero</label>
+                                <input type="number" placeholder="2588" name="numero" id="numero">
+
+                                <div class="campoDeError">
+                                    <ul id="numeroErroresPac">
+        
+                                    </ul>
+        
+                                </div>
+                            </div>
+                            <div class="campoColumn2">
+                                <label for="provincia">Provincia</label>
+                                <input type="text" placeholder="Provincia" name="provincia" id="provincia">
+
+                                <div class="campoDeError">
+                                    <ul id="provinciaErroresPac">
+        
+                                    </ul>
+        
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="cajaBtn">
+                        <button type="submit" id="btnRegPac">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+    </section>
+
+    <section class="formulario3 agregarTurno visibility1">
+
+        <h3>Registrar turno</h3>
+        <form class="formTurno" action="">
+            <div class="cajaGrande">
+                <fieldset>
+                    <legend>Odontólogo</legend>
+                    <div class="caposARellenar">
+                        <div class="camposHorizontales campoDeSeleccion ">
+                            <div class="campoColumn consulta">
+                                <label for="idOdontologo">Id Odontologo</label>
+                                <div class="btnYBuscador " id="formBtnYbuscador">
+                                    <input type="text" placeholder="ID A BUSCAR" id="idOdontologo1" name="idOdontologo">
+                                </div>
+                                <div class="campoDeError">
+                                    <ul id="errorDeBusqueda">
+                                        <li>Odontologo inexistente</li>
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                            <div id="resultadoDeConsulta">
+                                <!-- ... Resultados de búsqueda de odontólogos ... -->
+                            </div>
+                            <button class="btnSeleccionador1" id="btnSeleccionador1" type="submit">Seleccionar</button>
+                        </div>
+                    </div>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Paciente</legend>
+                    <div class="caposARellenar">
+                        <div class="camposHorizontales campoDeSeleccion ">
+                            <div class="campoColumn consulta">
+                                <label for="idPaciente">Id Paciente</label>
+                                <div class="btnYBuscador " id="formBtnYbuscador2">
+                                    <input type="text" placeholder="ID A BUSCAR" id="idPaciente1" name="idPaciente">
+                                </div>
+                                <div class="campoDeError">
+                                    <ul id="errorDeBusqueda2">
+                                        <li>Paciente inexistente</li>
+                                    </ul>
+                                </div>
+                               
+                            </div>
+                            <div id="resultadoDeConsulta2">
+                                <!-- ... Resultados de búsqueda de odontólogos ... -->
+                            </div>
+                            <button class="btnSeleccionador" id="btnSeleccionador2" type="submit">Seleccionar</button>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <div class="camposHorizontales">
+                    
+                    <div class="nombreOdontologoConsultado">
+                        <h2>Odontologo</h2>
+                        <h3 class="odontologoConsultado" id="odontologoConsultado"></h3>
+                    </div>
+                    <div class="nombrePacienteConsultado">
+                        <h2>Paciente</h2>
+                        <h3 class="pacienteConsultado" id="pacienteConsultado">Arriola</h3>
+                    </div>
+
+                   
+                </div>
+                <label for="fechaYhora">Fecha y hora</label>
+                <input type="datetime-local" placeholder="22-07-1994 14:30:00" name="fechaYhora" id="fechaYhora">
+        
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+        
+
+
+
+    </section>
+
+
+
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+</script>
+<script src="animaciones.js"></script>
+<script src="bdd.js"></script>
+<script src="bddPac.js"></script>
+<script src="info.js"></script>
+<script src="infoPac.js"></script>
+<script src="busqueda.js "></script>
+<script src="buscarOdXid.js"></script>
+<script src="registrarTurno.js"></script>
+</body>
+</html>

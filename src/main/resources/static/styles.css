@@ -1,0 +1,257 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #4caf9b; /* Green color */
+}
+
+nav a {
+    color: white !important;
+}
+
+.Entity {
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.entityImg img{
+    width: 300px;
+}
+
+.EntityTitulo h2 {
+    color: #4CAF50;
+}
+
+.crudContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.crudContainer a img{
+    width: 30px;
+}
+.containerEntitys {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.visibility {
+    display: none;
+}
+
+/* Agregar estilos específicos para la apariencia de la página según sea necesario */
+/* styles.css */
+
+/* Estilos para el formulario de agregar odontólogo */
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h3 {
+    color: #4CAF50;
+}
+
+.cajaGrande {
+    margin-top: 20px;
+}
+
+.camposHorizontales {
+    display: flex;
+    justify-content: space-between;
+}
+
+.campoColumn {
+    width: 48%;
+}
+
+button[type="submit"] {
+    background-color: #4cafaa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a07f;
+}
+
+/* Estilos para el formulario de agregar paciente */
+.formulario2 {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.formulario3 {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario2 h3 {
+    color: #4CAF50;
+}
+.formulario3 h3 {
+    color: #4CAF50;
+}
+
+.cajaGrande,
+.camposARellenar2,
+.domicilio {
+    margin-top: 20px;
+}
+
+.camposHorizontales2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.campoColumn2 {
+    width: 48%;
+}
+
+.lineaDivisoria {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.cajaBtn button[type="submit"] {
+    background-color: #4cafa0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.cajaBtn button[type="submit"]:hover {
+    background-color: #4597a0;
+}
+
+#btnReg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* animaciones */
+
+.formulario.visibility {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+    overflow: hidden;
+}
+
+.formulario {
+    opacity: 1;
+    max-height: 220;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
+header{
+    background-color: #8345a0;
+}
+.visibility{
+    display : none;
+}
+
+.custom-toast-class{
+    background-color: #4597a0;
+}
+.btnYBuscador{
+    display: flex;
+}
+
+.btnBuscar{
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cajaResultado{
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.178); 
+    background-color: red;
+
+}
+
+.cuerpoInfo{
+    background-color: white;
+    transition: background-color 0.3s ease
+}
+.cuerpoInfo:hover{
+    background-color: #4597a045;
+}
+
+
+
+#formularioEliminacion{
+    width: 21rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.btnYForm{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#numeroIdAEliminar{
+    width: 11rem;
+}
+#btnEliminar{
+    height: 3rem;
+}
+
+#resultadoDeConsulta{
+}
+
+#idOdontologo1{
+    width: 10rem;
+}
+
+.campoDeSeleccion{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.consulta{
+    width: 12rem;
+}
+
+.visibility1{
+    display: none;
+}

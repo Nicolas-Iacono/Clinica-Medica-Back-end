@@ -1,0 +1,51 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Odontólogos</title>
+    <!-- Agrega los estilos y scripts de Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="header center-align">Listado de Turnos</h1>
+
+        <!-- Botón para regresar a la pantalla anterior -->
+        <a class="waves-effect waves-light btn" onclick="window.history.back()">Regresar</a>
+
+        <!-- Tabla con encabezados de id, nombre, apellido y matrícula -->
+        <table class="highlight">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre odontologo</th>
+                    <th>Apellido odontologo</th>
+                    <th>Nombre paciente</th>
+                    <th>Apellido paciente</th>
+                    <th>Fecha y hora</th>
+                
+
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí puedes agregar las filas con la información de los odontólogos -->
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>Marcelo</td>
+                    <td>Diaz</td>
+                    <td>18-06-2022 14:30:00</td>
+
+
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
+    <script src="bdd.js"></script>
+
+</body>
+</html>
